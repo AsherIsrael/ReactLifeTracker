@@ -6,7 +6,7 @@ export default class PlayerModal extends React.Component {
     render() {
         return (
             <View style={this.props.styles.modal}>
-                <Text style={[this.props.styles.lifeColor, this,props.styles.modalLife]}>
+                <Text style={[this.props.styles.lifeColor, this.props.styles.modalLife]}>
                     {this.props.player.lifeTotal}
                 </Text>
                 <LifeButton styles={this.props.styles} displayText={"+1"} updatePlayerLife={this.props.updatePlayerLife} idx={this.props.idx} modifier={1}/>
