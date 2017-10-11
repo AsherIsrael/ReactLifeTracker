@@ -79,6 +79,8 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap'
     },
     lifeButton: {
-        width: '15%'
+        width: '15%',
+        justifyContent: 'center',
+        paddingTop: '10%'
     }
   });
