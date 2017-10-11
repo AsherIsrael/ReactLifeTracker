@@ -25,16 +25,7 @@ export default class PlayerLifeView extends React.Component{
         return(
             <View style={this.props.style}>
                 <Modal animationType='slide' transparent={false} visible={this.state.displayModal} onRequestClose={() => {this.alternateModal(false)}}>
-                    {/* <View style={styles.modal}>
-                        <Text style={[lifeColor, styles.modalLife]}>
-                            {this.props.player.lifeTotal}
-                        </Text>
-                        <LifeButton styles={styles} displayText={"+1"} updatePlayerLife={this.props.updatePlayerLife} idx={this.props.idx} modifier={1}/>
-                        <LifeButton styles={styles} displayText={"-1"} updatePlayerLife={this.props.updatePlayerLife} idx={this.props.idx} modifier={-1}/>
-                        <LifeButton styles={styles} displayText={"+5"} updatePlayerLife={this.props.updatePlayerLife} idx={this.props.idx} modifier={5}/>
-                        <LifeButton styles={styles} displayText={"-5"} updatePlayerLife={this.props.updatePlayerLife} idx={this.props.idx} modifier={-5}/>
-                    </View> */}
-                    <PlayerModal player={this.props.player} styles={styles} updatePlayerLife={this.props.updatePlayerLife} idx={this.props.idx}/>
+                    <PlayerModal alternateModal={this.alternateModal} player={this.props.player} styles={styles} lifeColor={lifeColor} updatePlayerLife={this.props.updatePlayerLife} idx={this.props.idx}/>
                 </Modal>
                 <TouchableHighlight style={styles.textContainer} onPress={() => this.alternateModal(true)}>
                     <View style={styles.textContainer}>
